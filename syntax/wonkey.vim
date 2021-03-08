@@ -36,6 +36,12 @@ syntax case ignore
 " :h syn-keyword
 "
 "
+" Preprocessor
+"
+syntax match   Include      "#Import"
+syntax match   PreCondit    "#.\+$"
+
+"
 " Strings
 "
 syntax region String start='"' end='"'
@@ -87,17 +93,11 @@ syntax keyword Repeat       Exit Continue
 syntax keyword Label        Case Default
 
 "
-" Preprocessor
-"
-syntax match   Include      "#Import"
-syntax match   PreCondit    "#.\+$"
-
-"
 " Operators and Delimiters
 "
+syntax match   Delimiter    "[\;\.\:\,]"
 syntax match   Operator     "[\+\-\*\/\?\|\~\&\>\<\=\[\]]"
 syntax match   Operator     ":="
-syntax match   Delimiter    "[\;\.\:\,]"
 syntax keyword Keyword      And Or Not
 syntax keyword Keyword      Mod Shr Shl
 
