@@ -97,7 +97,7 @@ syntax match   PreCondit    "#.\+$"
 "
 syntax match   Operator     "[\+\-\*\/\?\|\~\&\>\<\=\[\]]"
 syntax match   Operator     ":="
-syntax match   Delimiter    "[\;\.\:]"
+syntax match   Delimiter    "[\;\.\:\,]"
 syntax keyword Keyword      And Or Not
 syntax keyword Keyword      Mod Shr Shl
 
