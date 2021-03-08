@@ -19,6 +19,7 @@ let b:current_syntax = "wonkey"
 " - http://vimdoc.sourceforge.net/htmldoc/syntax.html
 "
 " :h syn-define
+" :h pattern-overview
 "
 "
 " :h syn-sync
@@ -120,8 +121,15 @@ syntax match   Identifier   "\<[a-zA-Z_][a-zA-Z0-9_]*"
 "
 "syntax match Function       "\<[a-zA-Z_][a-zA-Z0-9_]*[(]+"
 "syntax match Function       "\<\w\+("
-syntax match Function       "\zs\(\k\w*\)*\s*\ze("
-syntax match Function       "[()]"
+"
+" procName(
+"
+"syntax match Function       "\zs\(\k\w*\)*\s*\ze("
+"
+" procName:Type(
+"
+syntax match Function       "\zs\(\k\w*\)*\s*\ze\([:]\+\w\+\)\=("
+syntax match Operator       "[()]"
 
 "
 " Decimal numbers
