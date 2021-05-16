@@ -59,9 +59,11 @@ syntax match  Comment "'.*$"
 syntax keyword Keyword      End Return Cast VarPtr
 syntax keyword Keyword      Print
 syntax keyword Keyword      Function Lambda Method Property Operator Setter Getter Field
+syntax keyword Keyword      EndFunction EndLambda EndMethod EndProperty EndOperator
 syntax keyword Keyword      Namespace Using
 "syntax keyword Structure    Class Struct Interface Enum Extends Extension Implements Where
 syntax keyword Keyword      Class Struct Interface Enum Extends Extension Implements Where
+syntax keyword Keyword      EndClass EndStruct EndInterface EndEnum
 syntax keyword Keyword      New Delete Super Self Null
 syntax keyword Keyword      Abstract Virtual Override Final
 syntax keyword Keyword      Friend Inline
@@ -86,9 +88,9 @@ syntax keyword Debug        Assert DebugAssert RuntimeError DebugStop GetDebugSt
 " Conditional and Loop Statements
 "
 syntax keyword Conditional  If Then Else ElseIf EndIf
-syntax keyword Conditional  Select
-syntax keyword Repeat       For To Step Until Next EachIn
-syntax keyword Repeat       While Wend
+syntax keyword Conditional  Select EndSelect
+syntax keyword Repeat       For EndFor To Step Until Next EachIn
+syntax keyword Repeat       While Wend EndWhile
 syntax keyword Repeat       Repeat Forever
 syntax keyword Repeat       Exit Continue
 syntax keyword Label        Case Default
@@ -105,7 +107,7 @@ syntax keyword Keyword      Mod Shr Shl
 "
 " Exception handling
 "
-syntax keyword Exception    Try Catch Throw
+syntax keyword Exception    Try EndTry Catch Throw
 "
 " Reflection
 "
